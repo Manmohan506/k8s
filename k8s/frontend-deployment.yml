@@ -1,24 +1,23 @@
-  
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: react
+  name: frontend-deployment
   labels:
-    app: react
+    app: frontend
 spec:
   selector:
     matchLabels:
-      app: react
+      app: frontend
   template:
     metadata:
       labels:
-        app: react
+        app: frontend
     spec:
       containers:
-        - name: react
-          image: 8978443990/frontend
+        - name: frontend
+          image: 8978443990/frontend:latest
           imagePullPolicy: Always
           stdin: true
           ports:
             - containerPort: 3000
-      restartPolicy: Always   
+      restartPolicy: Always
