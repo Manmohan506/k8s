@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: react
-          image: 8978443990/react123:latest
+          image: 8978443990/frontend:latest
           imagePullPolicy: Always
           stdin: true
           ports:
