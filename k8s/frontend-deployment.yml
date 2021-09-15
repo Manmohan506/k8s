@@ -14,7 +14,7 @@ spec:
         app: react
     spec:
       containers:
-        - name: frontend
+        - name: react
           image: 8978443990/react2:latest
           imagePullPolicy: Always
           stdin: true
