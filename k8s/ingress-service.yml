@@ -19,6 +19,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: frontend-service
+                name: react
                 port:
                   number: 3000
