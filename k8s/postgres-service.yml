@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: postgres
+  name: postgres-service
 spec:
   type: ClusterIP
   selector:
@@ -9,3 +9,5 @@ spec:
   ports:
     - port: 5432
       targetPort: 5432
+      protocol: TCP
+© 2021 GitHub, Inc.
