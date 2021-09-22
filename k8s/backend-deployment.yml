@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend
+  name: backend-deployment
 spec:
   selector:
     matchLabels:
@@ -13,17 +13,17 @@ spec:
     spec:
       containers:
         - name: backend
-          image: 8978443990/backend123:latest
+          image: 8978443990/reactjs-nodejs-postgres_backend:latest
           ports:
             - containerPort: 8080
           env:
-            - name: database
+            - name: PGDATABASE
               value: loizenaidb
-            - name: username
+            - name: PGUSER
               value: postgres
-            - name: password
+            - name: PGPASS
               value: "123"
-            - name: host
+            - name: PGHOST
               value: postgres-service
-            - name: dialect
+            - name: PGDIALECT
               value: postgres
